@@ -14,9 +14,9 @@ public class Main {
         double height = -1;
         int n;
         System.out.print("Ведите кол-во квадратов=");
-        n=str.nextInt();
-        Squares squares=new Squares(n);
-        for (int i = 0; i<n; i++) {
+        n = str.nextInt();
+        Squares squares = new Squares(n);
+        for (int i = 0; i < n; i++) {
             System.out.print("Ведите сторону квадрата=");
 
             while (Square.CheckSizeSquare("" + (size = str.nextDouble())) < 0) {
@@ -24,9 +24,9 @@ public class Main {
                 if (size < 0) {
                     System.out.print("Не надо ломать мой (∩ᄑ_ᄑ)⊃━☆ﾟ*･｡*･:≡( ε:) -0ВЖУХ код тут работает магия" +
                             "\n\tЛадно дам тебе еще попытку:" + "");
-                }else {
-                    squares.setSquare(new Square(size),i);
-                    System.out.println(squares.getSquare(i)+"\n");
+                } else {
+                    squares.setSquare(new Square(size), i);
+                    System.out.println(squares.getSquare(i) + "\n");
                 }
             }
             square = new Square(size);

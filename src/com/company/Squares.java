@@ -3,7 +3,7 @@ package com.company;
 import java.util.Arrays;
 
 public class Squares {
-    private Square [] squares;
+    private Square[] squares;
 
     public Square getSquare(int index) {
         return squares[index];
@@ -14,23 +14,22 @@ public class Squares {
     }
 
     public Squares(int n) {
-      squares=new Square[n];
+        squares = new Square[n];
     }
 
     @Override
     public String toString() {
         return "Squares{" +
-                "squares=" + Arrays.toString(squares) + GetAreage()+
+                "squares=" + Arrays.toString(squares) + getAreage() +
                 '}';
     }
 
-    public  double GetAreage()
-    {
-        for(Square square : squares)
-        {
-                area=area+square.GetAreSquare();
+    public double getAreage() {
+        for (Square square : squares) {
+            area = area + square.GetAreSquare();
         }
         return area;
     }
-    public double area=0;
+
+    public double area = 0;
 }
