@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Square square;
+        System.out.println("GFYBGRIENRGNERUOGNGMERN 4iogj4wigw");
         SquarePrism squarePrism;
         Scanner str = new Scanner(System.in);
         double size = -1;
