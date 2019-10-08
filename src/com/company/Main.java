@@ -18,23 +18,15 @@ public class Main {
         n = str.nextInt();
         Squares squares = new Squares(n);
         for (int i = 0; i < n; i++) {
-            System.out.print("Ведите сторону квадрата=");
-
-            while (Square.CheckSizeSquare("" + (size = str.nextDouble())) < 0) {
-
-                if (size < 0) {
-                    System.out.print("Не надо ломать мой (∩ᄑ_ᄑ)⊃━☆ﾟ*･｡*･:≡( ε:) -0ВЖУХ код тут работает магия" +
-                            "\n\tЛадно дам тебе еще попытку:" + "");
-                } else {
-                    squares.setSquare(new Square(size), i);
-                    System.out.println(squares.getSquare(i) + "\n");
-                }
+            do {
+                System.out.print("Ведите сторону квадрата=");
             }
-            square = new Square(size);
-            System.out.println(square);
+            while (Square.CheckSizeSquare("" + (size = str.nextDouble())) < 0);
 
+            squares.setSquare(new Square(size), i);
+            System.out.println(squares.getSquare(i));
         }
-
+        System.out.println();
         System.out.println(squares.toString());
     /*    for (int j=0; j<n;j++) {
             System.out.print("Ведите высоту призмы=");
@@ -47,7 +39,8 @@ public class Main {
             }
             squarePrism = new SquarePrism(size, height);
             System.out.println(squarePrism);
-
         }*/
+
+        System.out.println("\nMax area:\n"+squares.getSquare(squares.getMaxAreaIndex()));
     }
 }
